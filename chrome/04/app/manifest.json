@@ -1,0 +1,20 @@
+{
+    "manifest_version": 3,
+    "name": "deno_webextension-sample-chrome-04",
+    "description": "deno_webextension-sample/chrome/04",
+    "version": "0.4",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_end",
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "permissions": [
+        "storage"
+    ]
+}
