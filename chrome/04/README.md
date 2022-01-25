@@ -2,11 +2,11 @@
 
 chrome 04はWebExtension APIを利用する処理を追加します。
 
-コンテンツスクリプト利用できるWebExtension APIは非常に限られています。
+コンテンツスクリプトで利用できるWebExtension APIは非常に限られています。
 
 https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis
 
-manifestで権限付与が必要な「storage」を利用してみます。
+ここではmanifestで権限付与が必要な「storage」を利用してみます。
 アクセスしたページのurlをstorageに保持して、前回アクセスしたページと今回アクセスしたページのurlをログ出力します。
 
 ```bash
@@ -29,10 +29,8 @@ manifestで権限付与が必要な「storage」を利用してみます。
 ```ts
 /// <reference lib="dom"/>
 
-// import browser from "webextension-polyfill";
-import browser from "https://esm.sh/webextension-polyfill@0.8.0";
-
-// https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scripts#webextension_apis
+import browser from "webextension-polyfill";
+// import browser from "https://esm.sh/webextension-polyfill@0.8.0";
 
 const storage = browser.storage;
 
