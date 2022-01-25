@@ -19,9 +19,20 @@ https://developer.mozilla.org/ja/docs/Mozilla/Add-ons/WebExtensions/Content_scri
         │   │   └── content.js --- Chrome拡張で実際に行う処理が出力されたJSファイル
         │   └── manifest.json --- Chrome拡張の設定ファイル
         ├── deno.jsonc --- Denoの設定ファイル
+        ├── importmap.json --- Denoの設定ファイルその2
         └── src
             └── content_scripts
                 └── content.ts --- Chrome拡張で実際に行う処理を書くTSファイル
+```
+
+## importmap.json
+
+```json
+{
+    "imports": {
+        "webextension-polyfill": "https://esm.sh/webextension-polyfill@0.8.0"
+    }
+}
 ```
 
 ## content.ts
