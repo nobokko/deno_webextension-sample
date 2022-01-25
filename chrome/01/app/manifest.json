@@ -1,0 +1,15 @@
+{
+    "manifest_version":3,
+
+    "name": "deno_webextension-sample-chrome-01",
+    "description": "deno_webextension-sample/chrome/01",
+    "version": "0.1",
+
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "run_at": "document_end",
+        "js": ["js/content.js"]
+    }]
+}
