@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "deno_webextension-sample-chrome-05",
+    "description": "deno_webextension-sample/chrome/05",
+    "version": "0.5",
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "run_at": "document_end",
+            "js": [
+                "js/content.js"
+            ]
+        }
+    ],
+    "background": {
+        "service_worker": "js/background.js",
+        "type": "module"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "permissions": [
+        "storage",
+        "scripting"
+    ]
+}

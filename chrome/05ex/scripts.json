@@ -1,0 +1,17 @@
+{
+  "$schema": "https://deno.land/x/denon@2.4.9/schema.json",
+  "scripts": {
+    "build": [
+      {
+        "cmd": "deno bundle --config chrome/05ex/deno.jsonc --importmap chrome/05ex/importmap.json chrome/05ex/src/content_scripts/content.ts chrome/05ex/app/js/content.js",
+        "desc": "js/content.js",
+        "watch": false
+      },
+      {
+        "cmd": "deno bundle --config chrome/05ex/deno.jsonc --importmap chrome/05ex/importmap.json chrome/05ex/src/background/background.ts chrome/05ex/app/js/background.js",
+        "desc": "js/content.js",
+        "watch": false
+      }
+    ]
+  }
+}
