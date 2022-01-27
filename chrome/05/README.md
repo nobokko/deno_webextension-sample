@@ -25,7 +25,7 @@ hashchangeイベントやpopstateイベントは今回の目的には使えま�
 .
 └── chrome
     └── 05
-        ├── README.md
+        ├── README.md --- これ
         ├── app
         │   ├── js
         │   │   ├── background.js --- Chrome拡張で実際に行う処理が出力されたJSファイル
